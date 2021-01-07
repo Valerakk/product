@@ -1,17 +1,11 @@
-import React, {Component} from 'react'
-import RootComponent from './components/rootCompnent/rootComponent'
+import React, { Component } from "react";
+import RootComponent from "./components/rootCompnent/rootComponent";
 import "antd/dist/antd.css";
 
-
 class App extends Component {
-
   render() {
-    return (
-        <RootComponent>
-       
-       </RootComponent>
-        )
-      }
-    }
+    return <RootComponent />;
+  }
+}
 
-export default App
+export default App;

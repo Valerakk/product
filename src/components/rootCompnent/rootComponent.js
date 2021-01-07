@@ -1,33 +1,18 @@
-import React, {Component} from 'react'
-import classes from './rootComponent.css'
-import BookList from './bookList/bookList'
-import Appp from './test'
-
+import React, { Component } from "react";
+import classes from "./rootComponent.css";
+import BookList from "./bookList/bookList";
 
 class RootComponent extends Component {
-  
- 
-
-render()
-  {
+  render() {
     return (
-     
-        
       <div className={classes.RootComponent}>
-      <div className={classes.RootComponentWrapper}>
-      <h1>Книги</h1>
-         
-     
-      
-      <BookList/>
-      
-      <Appp/>
-     
+        <div className={classes.RootComponentWrapper}>
+          <h1>Книги</h1>
+          <BookList />
+        </div>
       </div>
-      </div>
-     
-    )
+    );
   }
 }
 
-export default RootComponent
+export default RootComponent;
