@@ -1,8 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import classes from "./bookElem.css";
 import getData from "../../../../dataJSON";
 import ModalWindow from "../../modalWindow/modalWindow";
 import ButtonR from "../../../../UI/buttonR/buttonR";
+
 
 class BookElem extends Component {
   state = { name: "", author: "", stars: "", modalActive: false };
@@ -13,15 +14,15 @@ class BookElem extends Component {
       this.setState(book);
     });
   }
+ 
+  
 
-  handleCange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
 
-  handleSubmit = () => {
-    console.log(this.state);
-    this.setModalActive(false);
+  handleSubmit = (value) => {
+    
+
+    this.setState({...value,modalActive:false})
+    
   };
 
   setModalActive = (value) => {
@@ -52,8 +53,7 @@ class BookElem extends Component {
         <ModalWindow
           active={this.state.modalActive}
           setActive={this.setModalActive}
-          state={this.state}
-          onChange={this.handleCange}
+          statee={this.state}
           handleSubmit={this.handleSubmit}
         />
         <ButtonR onClick={() => this.setModalActive(true)} />

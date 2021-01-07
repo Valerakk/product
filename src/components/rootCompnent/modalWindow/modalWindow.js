@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./modalWindow.css";
 import ModalWindowEL from "./modalWindowEl/modalWindowEl";
 
-const ModalWindow = ({ active, setActive, state, onChange, handleSubmit }) => {
+const ModalWindow = ({ active, setActive, statee,  handleSubmit }) => {
   const classs = classes.ModalActive + " " + classes.ModalWindow;
-
+ 
   return (
     <div
       className={active ? classs : classes.ModalWindow}
@@ -17,8 +17,7 @@ const ModalWindow = ({ active, setActive, state, onChange, handleSubmit }) => {
         <ModalWindowEL
           handleSubmit={handleSubmit}
           onCancel={setActive}
-          state={state}
-          onChange={onChange}
+          statee={statee}
         />
       </div>
     </div>
