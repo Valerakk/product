@@ -1,0 +1,18 @@
+{
+    "books": [
+       
+        {
+            "id": 1,
+            "name": "Sample",
+            "author": "Somebody",
+            "stars": 5
+        },
+         {
+            "id": 2,
+            "name": "Winter",
+            "author": "Ted",
+            "stars": 10
+        }
+    ]
+}
+

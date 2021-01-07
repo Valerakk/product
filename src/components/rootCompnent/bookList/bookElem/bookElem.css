@@ -1,0 +1,22 @@
+.BookElem {
+    border: 1px solid rgb(66, 44, 44);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    padding-left: 150px;
+    
+   
+}
+
+.BookElemLI {
+    border: 1px solid rgb(58, 47, 73);
+    border-radius: 5px;
+    marker: none;
+    padding-top: 5px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, .2);
+}
+.BookElem ul{
+    
+    marker: none;
+}

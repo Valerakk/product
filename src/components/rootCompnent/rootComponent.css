@@ -1,0 +1,25 @@
+
+.RootComponent {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    flex-grow: 1;
+    width: 100%;
+    cursor:default;
+    height: 100vh;
+    background: linear-gradient(90deg, #5b5b5c 0%,#3d7a77 100%);
+}
+
+.RootComponent h1 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.RootComponentWrapper {
+    width: 400px;
+}
+
+.RootComponent h1{
+    color: #7c8e96;
+    
+}
