@@ -20,8 +20,11 @@ class BookElem extends Component {
 
   handleSubmit = (value) => {
     
-
+    value.author = value.author.replace(/[|&;$%@"<>()+,]/g, "");
+    value.name = value.name.replace(/[|&;$%@"<>()+,]/g, "");
     this.setState({...value,modalActive:false})
+   
+    
     
   };
 
