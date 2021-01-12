@@ -9,9 +9,10 @@ class ModalWindowEL extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {...props.statee,errors:{name:"",author:"",stars:"" }}
+    this.state = {...props.statee,errors:{name:"",author:"",stars:"" },}
+  
     }
-
+  
   
 
   componentDidUpdate(prevProps){
@@ -99,7 +100,7 @@ class ModalWindowEL extends Component {
             />
              {this.state.errors.stars && this.state.errors.stars.length > 0 && (
                 <span >{this.state.errors.stars}</span>)}<br/>
-          <button type="button" onClick={() => handleSubmit(this.state)}>
+          <button type="button" disabled={!this.state.author || !this.state.name || !this.state.stars} onClick={() => handleSubmit(this.state)}>
             Зберегти
           </button>{" "}
           {""}
