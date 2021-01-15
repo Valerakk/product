@@ -17,6 +17,8 @@ class BookElem extends Component {
   handleSubmit = (value) => {
     value.author = value.author.replace(/[|&;$%@"<>()+,]/g, "");
     value.name = value.name.replace(/[|&;$%@"<>()+,]/g, "");
+    value.author = value.author[0].toUpperCase() +  value.author.slice(1).toLowerCase();
+    value.name = value.name[0].toUpperCase() + value.name.slice(1).toLowerCase();
     this.setState({ ...value, modalActive: false });
   };
 

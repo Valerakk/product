@@ -2,8 +2,8 @@
   "books": [
     {
       "id": 1,
-      "name": "Sample",
-      "author": "Somebody",
+      "name": "sample",
+      "author": "somebody",
       "stars": 5
     },
     {
