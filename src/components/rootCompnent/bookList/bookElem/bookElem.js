@@ -1,9 +1,8 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import classes from "./bookElem.css";
 import getData from "../../../../dataJSON";
 import ModalWindow from "../../modalWindow/modalWindow";
 import ButtonR from "../../../../UI/buttonR/buttonR";
-
 
 class BookElem extends Component {
   state = { name: "", author: "", stars: "", modalActive: false };
@@ -14,18 +13,11 @@ class BookElem extends Component {
       this.setState(book);
     });
   }
- 
-  
-
 
   handleSubmit = (value) => {
-    
     value.author = value.author.replace(/[|&;$%@"<>()+,]/g, "");
     value.name = value.name.replace(/[|&;$%@"<>()+,]/g, "");
-    this.setState({...value,modalActive:false})
-   
-    
-    
+    this.setState({ ...value, modalActive: false });
   };
 
   setModalActive = (value) => {
