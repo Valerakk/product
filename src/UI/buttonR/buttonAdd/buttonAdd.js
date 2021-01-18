@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PlusCircleOutlined  } from "@ant-design/icons";
+import { PlusCircleOutlined } from "@ant-design/icons";
 import classes from "./buttonAdd.css";
 import { Button } from "antd";
 

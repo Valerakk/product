@@ -1,5 +1,4 @@
 .RootComponent {
-  
   padding-top: 10px;
   padding-left: 10px;
   flex-grow: 1;
@@ -9,17 +8,15 @@
   background: linear-gradient(90deg, #5b5b5c 0%, #3d7a77 100%);
 }
 
-.RootComponentLine{
-display: inline-flex;
-padding-left: 10px;
-padding-top: 10px;
-grid-gap: 230px;
-
+.RootComponentLine {
+  display: inline-flex;
+  padding-left: 10px;
+  padding-top: 10px;
+  grid-gap: 230px;
 }
 
 .RootComponentWrapper {
   width: 400px;
-  
 }
 
 .RootComponent h1 {
