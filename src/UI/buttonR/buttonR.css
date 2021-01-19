@@ -1,6 +1,7 @@
 .ButtonIcon {
   color: rgb(58, 47, 73);
   font-size: 25px;
+
 }
 .ButtonR {
   color: rgb(58, 47, 73);
@@ -8,4 +9,5 @@
   border: 1px solid rgb(58, 47, 73);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+  margin-left: 198px;
 }

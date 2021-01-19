@@ -26,3 +26,32 @@
   transform: scale(1);
   transition: 0.4s all;
 }
+.BookElemLI {
+  border: 1px solid rgb(58, 47, 73);
+  border-radius: 5px;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.BookElemLI input {
+  display: flex;
+}
+
+.BookElemLI b {
+  color: darkgreen;
+  font-weight: 600;
+}
+.BookElemLI button {
+  background-color: #4caf50;
+  border: 2px solid green;
+  color: white;
+  padding: 0.5vh 1vw;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.BookElemLI input {
+  box-sizing: border-box;
+  border: 2px solid green;
+  background-color: #3cbc8d;
+}
+

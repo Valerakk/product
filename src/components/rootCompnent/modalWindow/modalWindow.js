@@ -31,16 +31,16 @@ class ModalWindow extends Component {
   };
 
   render() {
-    const { handleSubmit, onCancel } = this.props;
+    const { handleSubmit} = this.props;
     return (
       <div
-        className={this.active ? this.classs : classes.ModalWindow}
-        onClick={() => this.setActive(false)}
+        className={this.props.active ? this.classs : classes.ModalWindow}
+        onClick={() => this.props.setActive(false)}
       >
         <div
           className={classes.ModalContent}
           onClick={(e) => e.stopPropagation()}
-        />
+        >
 
         <div className={classes.BookElemLI}>
           <form>
@@ -86,13 +86,13 @@ class ModalWindow extends Component {
               onClick={() => handleSubmit(this.state)}
             >
               Зберегти
-            </button>{" "}
-            {""}
-            <button type="reset" onClick={() => onCancel(false)}>
+            </button>
+            <button type="reset" onClick={() => this.props.setActive(false)}>
               Скасувати
             </button>
           </form>
         </div>
+      </div>
       </div>
     );
   }
