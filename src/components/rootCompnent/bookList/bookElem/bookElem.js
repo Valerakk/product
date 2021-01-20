@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import classes from "./bookElem.css";
-import getData from "../../../../dataJSON";
 import ModalWindow from "../../modalWindow/modalWindow";
 import ButtonR from "../../../../UI/buttonR/buttonR";
 
 class BookElem extends Component {
-  state = { name: "", author: "", stars: "", modalActive: false };
+  state = { book :{ name:"",author:"",stars:""}, modalActive: false };
 
   componentDidMount() {
-    getData().then((res) => {
-      const book = res.books.find((book) => book.id === 1);
-      this.setState(book);
-    });
+    this.setState({book: this.props.book})
+
   }
 
   handleSubmit = (value) => {
@@ -21,7 +18,7 @@ class BookElem extends Component {
       value.author[0].toUpperCase() + value.author.slice(1).toLowerCase();
     value.name =
       value.name[0].toUpperCase() + value.name.slice(1).toLowerCase();
-    this.setState({ ...value, modalActive: false });
+    this.setState({ book:{...value}, modalActive: false });
   };
 
   setModalActive = (value) => {
@@ -29,30 +26,31 @@ class BookElem extends Component {
   };
 
   render() {
+    const { book } = this.state
     return (
       <div className={classes.BookElem}>
         <ul>
           Автор:
           <div className={classes.BookElemLI}>
-            {this.state.author}
+            {book.author}
 
             <br />
           </div>
           Назва:
           <div className={classes.BookElemLI}>
-            {this.state.name}
+            {book.name}
             <br />
           </div>
           Оцінка:
           <div className={classes.BookElemLI}>
-            {this.state.stars}
+            {book.stars}
             <br />
           </div>
         </ul>
         <ModalWindow
           active={this.state.modalActive}
           setActive={this.setModalActive}
-          statee={this.state}
+          book={book}
           handleSubmit={this.handleSubmit}
         />
         <ButtonR onClick={() => this.setModalActive(true)} />

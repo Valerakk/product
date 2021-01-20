@@ -5,7 +5,7 @@ class ModalWindow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...props.statee,
+      ...props.book,
       errors: { name: "", author: "", stars: "" },
     };
   }
@@ -13,8 +13,8 @@ class ModalWindow extends Component {
   classs = classes.ModalActive + " " + classes.ModalWindow;
 
   componentDidUpdate(prevProps) {
-    if (prevProps.statee !== this.props.statee)
-      this.setState({ ...this.props.statee });
+    if (prevProps.book !== this.props.book)
+      this.setState({ ...this.props.book });
   }
 
   handleChange = (event) => {
